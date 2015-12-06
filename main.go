@@ -1,11 +1,9 @@
-# configs-in-golang
-
+/*
 This pattern for handling command line flags with a
 Config struct, DefineFlags() and ValidateConfig()
 allows for great reuse/combination of libraries
 and easy testing of code.
-
-~~~
+*/
 package main
 
 import (
@@ -62,4 +60,3 @@ func main() {
 
 	fmt.Printf("flag parsing done, the rest of program goes here...\n")
 }
-~~~
