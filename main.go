@@ -53,6 +53,9 @@ func main() {
 	cfg.DefineFlags(myflags)
 
 	err := myflags.Parse(os.Args[1:])
+	if err != nil {
+		log.Fatalf("%s command line flag parse error: '%s'", ProgramName, err)
+	}
 	err = cfg.ValidateConfig()
 	if err != nil {
 		log.Fatalf("%s command line flag error: '%s'", ProgramName, err)
